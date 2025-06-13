@@ -1,6 +1,7 @@
 @font-face {
-	font-family: Modern Prestige;
-	src: url(../Fonts/Modernn Prestige DEMO.otf);
+	font-family: 'Modern Prestige';
+	src: url('../Fonts/Modern Prestige DEMO.otf') format('opentype');
+	font-display: swap;
 }
 
 * {
@@ -24,9 +25,9 @@ body {
 	overflow: hidden;
 	position: relative;
 	color: white;
-	background: linear-gradient(-45deg, #6E3B50, #701C3A, #8C1E54, #2D001E);
+	background: linear-gradient(-45deg, #B11226, #DA3F9D, #8C1E54, #2D001E);
 	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
+	animation: gradient 15s ease infinite;
 }
 
 @keyframes gradient {
@@ -39,4 +40,75 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.site-header {
+    background: transparent;
+    padding: 20px 0;
+    font-family: 'Modern Prestige', serif;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Modern Prestige', serif;
+    transition: color 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    color: #ccc;
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-bar {
+        justify-content: center;
+        position: relative;
+    }
+
+    .nav-bar ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+    }
+
+    .nav-bar ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        align-self: flex-end;
+    }
 }
