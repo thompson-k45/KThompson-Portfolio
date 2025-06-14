@@ -1,7 +1,13 @@
 @font-face {
 	font-family: 'Modern Prestige';
-	src: url('../Fonts/Modern Prestige DEMO.otf') format('opentype');
+	src: url('../Fonts/Modern Prestige/Modern Prestige DEMO.otf') format('opentype');
 	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../Fonts/Satoshi/Fonts/OTF/Satoshi-Medium.otf') format('opentype');
+    font-display: swap;
 }
 
 * {
@@ -25,9 +31,9 @@ body {
 	overflow: hidden;
 	position: relative;
 	color: white;
-	background: linear-gradient(-45deg, #B11226, #DA3F9D, #8C1E54, #2D001E);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	background: linear-gradient(-45deg, #07a2c4, #68e6f8, #19b3d3, #4063b5, #d7808d, #fcd490);
+	background-size: 350% 350%;
+	animation: gradient 20s ease infinite;
 }
 
 @keyframes gradient {
@@ -45,7 +51,6 @@ body {
 .site-header {
     background: transparent;
     padding: 20px 0;
-    font-family: 'Modern Prestige', serif;
 }
 
 .nav-bar {
@@ -59,20 +64,22 @@ body {
 .logo {
     height: 50px;
     width: auto;
+    color: white;
 }
 
 .nav-bar ul {
     list-style: none;
     display: flex;
     gap: 30px;
+    top: 2rem;
+    color: white;
 }
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: white;
     font-size: 16px;
-    font-family: 'Modern Prestige', serif;
     transition: color 0.3s ease;
+    font-family: Satoshi;
 }
 
 .nav-bar ul li a:hover {
@@ -82,11 +89,15 @@ body {
 /* Hamburger Menu for Mobile */
 .menu-toggle {
     display: none;
-    font-size: 28px;
+    font-size: 30px;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
+    align-self: flex-start;
+    top: 1.6rem;
+    left: 1rem;
+    position: fixed;
 }
 
 /* Responsive Styling */
@@ -94,6 +105,8 @@ body {
     .nav-bar {
         justify-content: center;
         position: relative;
+        display: flex;
+        align-self: center
     }
 
     .nav-bar ul {
@@ -101,14 +114,15 @@ body {
         width: 100%;
         display: none;
         margin-top: 10px;
+        align-items: flex-start;
     }
 
     .nav-bar ul.active {
-        display: flex;
+        display: block;
     }
 
     .menu-toggle {
         display: block;
-        align-self: flex-end;
+        align-self: flex-start;
     }
 }
