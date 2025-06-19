@@ -61,10 +61,19 @@ body {
     flex-wrap: wrap;
 }
 
-.logo {
-    height: 50px;
+#logo {
     width: auto;
-    color: white;
+    color: #fbeee0;
+    font-family: Satoshi;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-shadow: #422800 4px 4px 0 0 ;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+#logo:hover {
 }
 
 .nav-bar ul {
@@ -72,18 +81,45 @@ body {
     display: flex;
     gap: 30px;
     top: 2rem;
-    color: white;
 }
 
-.nav-bar ul li a {
+/* Button styling from: https://getcssscan.com/css-buttons-examples, by UIForms */
+
+a.nav-button {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
     text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
     font-family: Satoshi;
 }
 
-.nav-bar ul li a:hover {
-    color: #ccc;
+a.nav-button:hover {
+  background-color: #fff;
+  transition: color 0.5s ease;
+}
+
+a.nav-button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  a.nav-button {
+    min-width: 120px;
+    padding: 0 25px;
+  }
 }
 
 /* Hamburger Menu for Mobile */
