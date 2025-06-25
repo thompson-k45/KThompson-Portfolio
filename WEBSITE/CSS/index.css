@@ -27,30 +27,42 @@ body {
 	font-family: Arial, sans-serif;
 	line-height: 1.6;
 	max-width: 100%;
-	height: 100%;
+	height: 100vh;
 	overflow: hidden;
 	position: relative;
 	color: white;
-	background: linear-gradient(-45deg, #07a2c4, #68e6f8, #19b3d3, #4063b5, #d7808d, #fcd490);
-	background-size: 350% 350%;
-	animation: gradient 20s ease infinite;
 }
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.background {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(-90deg, #603813, #b29f94);
+    background-size: 200% 200%;
+    animation: gradientAnimation 15s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+    transition: transform 0.1s ease-out;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .site-header {
     background: transparent;
     padding: 20px 0;
+    z-index: 1;
 }
 
 .nav-bar {
@@ -59,6 +71,7 @@ body {
     justify-content: space-between;
     padding: 0 40px;
     flex-wrap: wrap;
+   position: relative;
 }
 
 #logo {
@@ -119,7 +132,7 @@ a.nav-button:active {
   a.nav-button {
     min-width: 120px;
     padding: 0 25px;
-  }
+}
 }
 
 /* Hamburger Menu for Mobile */
