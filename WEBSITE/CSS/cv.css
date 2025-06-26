@@ -1,21 +1,25 @@
 .container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #fbeee0;
     padding: 2rem;
     margin-bottom: 2rem;
     z-index: 1;
     max-width: 1200px;
     margin: 2rem auto;
     border-radius: 12px;
-    color: #fbeee0;
+    color: #422800;
+    border: 5px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 12px 12px 0 0;
+    font-weight: 600;
+    font-family: Satoshi;
 }
-
 
 h1, h2, h3 {
-    color: #fbeee0;
+    color: #422800;
 }
 a {
-    color: #ffd;
-    text-decoration: underline;
+    color: #422800;
+    text-decoration: bold;
 }
 .section {
     margin-bottom: 2rem;
@@ -23,4 +27,9 @@ a {
 ul {
     list-style: none;
     padding-left: 0;
+}
+
+.icon {
+  margin-right: 8px; /* Adjust value as needed */
+  vertical-align: middle; /* Optional: aligns icon better with text */
 }

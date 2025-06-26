@@ -40,7 +40,7 @@ body {
     height: 200%;
     background: repeating-linear-gradient(-90deg, #603813, #b29f94);
     background-size: 200% 200%;
-    animation: gradientAnimation 15s ease-in-out infinite;
+    animation: gradientAnimation 10s ease-in-out infinite;
     pointer-events: none;
     z-index: -1;
     transition: transform 0.1s ease-out;
