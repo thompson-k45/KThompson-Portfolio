@@ -4,6 +4,7 @@
     margin-bottom: 2rem;
     z-index: 1;
     max-width: 1200px;
+    width: auto;
     margin: 2rem auto;
     border-radius: 12px;
     color: #422800;
@@ -24,12 +25,18 @@ a {
 .section {
     margin-bottom: 2rem;
 }
+
+.container:hover {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
 ul {
     list-style: none;
     padding-left: 0;
 }
 
 .icon {
-  margin-right: 8px; /* Adjust value as needed */
-  vertical-align: middle; /* Optional: aligns icon better with text */
+  margin-right: 8px;
+  vertical-align: middle; /* aligns icon better with text */
 }
