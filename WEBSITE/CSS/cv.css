@@ -1,3 +1,4 @@
+/* Text Boxes*/
 .container {
     background-color: #fbeee0;
     padding: 2rem;
@@ -15,13 +16,42 @@
     font-family: Satoshi;
 }
 
+/* Headers */
 h1, h2, h3 {
     color: #422800;
 }
+
+/* Links */
 a {
-    color: #422800;
-    text-decoration: bold;
+  color: #0645AD;
+  text-decoration: underline;
 }
+
+/* Visited links */
+a:visited {
+  color: #5A3696;
+}
+
+/* Hover and focus states for links */
+a:hover,
+a:focus {
+  color: #0B0080;
+  background-color: #e6f0ff;
+  text-decoration: underline;
+  outline: none;
+}
+
+/* When clicking links */
+a:active {
+  color: #FF0000;
+}
+
+/* Keyboard focus outline (very important for accessibility) */
+a:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
 .section {
     margin-bottom: 2rem;
 }

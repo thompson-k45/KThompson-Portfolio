@@ -1,0 +1,17 @@
+/* Text Boxes*/
+.container {
+    background-color: #fbeee0;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    z-index: 1;
+    max-width: 1200px;
+    width: auto;
+    margin: 2rem auto;
+    border-radius: 12px;
+    color: #422800;
+    border: 5px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 12px 12px 0 0;
+    font-weight: 600;
+    font-family: Satoshi;
+}

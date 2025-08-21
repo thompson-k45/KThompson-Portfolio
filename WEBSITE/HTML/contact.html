@@ -1,25 +1,40 @@
-<!-- ADAPTED FROM: https://codepen.io/tarunraotd/pen/Njowee */ -->
+<!-- CONTACT FORM ADAPTED FROM: https://codepen.io/tarunraotd/pen/Njowee -->
+
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Katie Thompson - Home</title>
+
+  <!-- SEO Properties -->
+  <meta property="og:title" content="Katie Thompson | Interactive Computing Portfolio">
+  <meta property="og:description" content="Explore Katie Thompson’s portfolio – projects in web development, programming, and interactive computing.">
+  <meta property="og:type" content="website">
+  <title>Katie Thompson | Contact</title>
+
+  <!-- Bootstrap Responsiveness Implementation -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
-  <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon.ico"> <!-- PLACEHOLDER - CHECK USAGE RIGHTS -->
-  <link rel="stylesheet" href="../CSS/contact.css" type="text/css" title="core-HC">
+
+  <!-- PLACEHOLDER - CHECK USAGE RIGHTS -->
+  <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon.ico">
+
+  <!-- NEED LIGHT MODE STYLESHEET -->
   <link rel="stylesheet" href="../CSS/navigation-core.css" type="text/css" title="core-HC">
+  <link rel="stylesheet" href="../CSS/contact.css" type="text/css" title="core-HC">
+
+  <!-- Linked Scripts -->
   <script src="../JavaScript/jquery-3.7.1.min.js"></script>
-  <script src="../JavaScript/navigation-core.js"></script>
   <script src="../JavaScript/contact.js"></script>
+  <script src="../JavaScript/navigation-core.js"></script>
 </head>
 <body>
   <div class="background" aria-hidden="true"></div>
-  <!-- NAV BAR -->
+
+  <!-- Navigation Bar -->
   <header id="masthead" class="site-header">
     <div class="nav-bar">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -34,15 +49,19 @@
       </ul>
     </div>
   </header>
-<div class="letter">
-  <form>
-    <input type="email" id="email" required />
-    <textarea id="message" required></textarea>
-    <input type="button" id="sendEmail" value="Send" />
-  </form>
-</div>
-<div class="userfeedback">
-  <p> Message sent, thank you! Please monitor your email for a reply. </p>
-  <input type="button" id="newMessage" value="Send Another Message">
-</div>
+
+  <!-- Contact Form -->
+  <div class="letter">
+    <form>
+      <input type="email" id="email" required />
+      <textarea id="message" required></textarea>
+      <input type="button" id="sendEmail" value="Send" />
+    </form>
+  </div>
+
+  <!-- Behind Contact Form -->
+  <div class="userfeedback">
+    <p> Message sent, thank you! Please monitor your email for a reply. </p>
+    <input type="button" id="newMessage" value="Send Another Message">
+  </div>
 </body>
