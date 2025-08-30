@@ -1,24 +1,24 @@
 /* Text Boxes*/
 .container {
-    background-color: #fbeee0;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    z-index: 1;
-    max-width: 1200px;
-    width: auto;
-    margin: 2rem auto;
-    border-radius: 12px;
-    color: #422800;
-    border: 5px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 12px 12px 0 0;
-    font-weight: 600;
-    font-family: Satoshi;
+  background-color: #fbeee0;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  z-index: 1;
+  max-width: 1200px;
+  width: auto;
+  margin: 2rem auto;
+  border-radius: 12px;
+  color: #422800;
+  border: 5px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 12px 12px 0 0;
+  font-weight: 600;
+  font-family: Satoshi;
 }
 
 /* Headers */
 h1, h2, h3 {
-    color: #422800;
+  color: #422800;
 }
 
 /* Links */
@@ -52,18 +52,25 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+/* Download Button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+
 .section {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .container:hover {
-    box-shadow: #422800 2px 2px 0 0;
-    transform: translate(2px, 2px);
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
 ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 
 .icon {
