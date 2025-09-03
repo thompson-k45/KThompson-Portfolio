@@ -19,8 +19,7 @@
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
 
-  <!-- PLACEHOLDER - CHECK USAGE RIGHTS -->
-  <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon-32x32.png">
 
   <!-- NEED LIGHT MODE STYLESHEET -->
   <link rel="stylesheet" href="../CSS/navigation-core.css" type="text/css" title="core-HC">
@@ -38,9 +37,9 @@
   <header id="masthead" class="site-header">
     <div class="nav-bar">
       <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <a href="index.html" id="logo">
-        LOGO PLACEHOLDER
-      </a>
+            <a href="index.html">
+                <img src="../Images/branding-logo.png" alt="Katie Thompson Main Logo" id="logo">
+            </a>
       <ul>
         <li><a href="cv.html" class="nav-button">CV</a></li>
         <li><a href="aboutme.html" class="nav-button">About Me</a></li>
@@ -53,8 +52,9 @@
   <!-- Contact Form -->
   <div class="letter">
     <form>
-      <input type="email" id="email" required />
-      <textarea id="message" required></textarea>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" required title="Enter your email address" placeholder="your@email.com" />
+      <textarea id="message" required title="Enter your message" placeholder="Type your message here"></textarea>
       <input type="button" id="sendEmail" value="Send" />
     </form>
   </div>

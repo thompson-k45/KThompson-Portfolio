@@ -58,6 +58,7 @@ a:focus-visible {
   align-items: center;
   gap: 0.5em;
   text-decoration: none;
+}
 
 .section {
   margin-bottom: 2rem;
