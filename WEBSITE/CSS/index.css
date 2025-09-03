@@ -79,3 +79,37 @@ header {
     font-size: 1rem;
   }
 }
+
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Ensure both sections take up about half the width */
+.hero-section, 
+#hero-image {
+  flex: 1;             /* let them share available space equally */
+  max-width: 50%;
+}
+
+/* Make the image responsive */
+#hero-image img {
+  width: 85%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+  }
+
+  .hero-section,
+  #hero-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
