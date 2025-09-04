@@ -5,8 +5,6 @@
 }
 
 * {
-	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
@@ -23,7 +21,6 @@ body {
     min-height: 100vh;
     overflow-x: hidden; /* allow vertical scrolling, prevent horizontal */
     position: relative;
-    color: white;
 }
 
 .background {
@@ -47,7 +44,7 @@ body {
     justify-content: space-between;
     padding: 0 40px;
     flex-wrap: wrap;
-    position: relative;
+    position: sticky;
     z-index: 10;
 }
 
@@ -70,11 +67,11 @@ body {
 /* Button styling from: https://getcssscan.com/css-buttons-examples, by UIForms */
 
 a.nav-button {
-    background-color: #fbeee0;
-    border: 2px solid #422800;
+    background-color: #f89899; /* new pink background */
+    border: 2px solid #FFFFFF; /* white border for visibility */
     border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: #422800;
+    box-shadow: #1a001a 4px 4px 0 0; /* darker shadow */
+    color: #1a001a; /* dark text for contrast and accessibility */
     cursor: pointer;
     display: inline-block;
     font-weight: 600;
@@ -86,18 +83,25 @@ a.nav-button {
     -webkit-user-select: none;
     user-select: none;
     touch-action: manipulation;
-    font-family: Satoshi;
+    font-family: Satoshi, Arial, sans-serif;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-a.nav-button:hover {
-  background-color: #fff;
-  transition: color 0.5s ease;
+a.nav-button:hover,
+a.nav-button:focus {
+    background-color: #d16b6c; /* darker pink for hover/focus */
+    color: #FFD700; /* gold/yellow for high contrast */
+    outline: 2px solid #FFD700; /* visible focus indicator */
+    outline-offset: 2px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 a.nav-button:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
+    box-shadow: #1a001a 2px 2px 0 0;
+    transform: translate(2px, 2px);
 }
+
+/* MOBILE */
 
 @media (min-width: 768px) {
   a.nav-button {
