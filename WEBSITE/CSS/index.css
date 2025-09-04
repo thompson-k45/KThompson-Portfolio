@@ -1,14 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #330033;
+  overflow: hidden;
+}
+		
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../Images/branding-logo.png');
+  background-size: 100px 100px;
+  height: 100vh;
+  width: 100vw;
+  animation: scroll 90s infinite linear;
+  opacity: 0.05;
+  background-repeat: repeat;
+  z-index: 0; /* stays at the very back */
+  pointer-events: none; /* ensures it never blocks clicks */
+}
+
+@keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;;
+  align-items: flex-start; /* keeps text + image aligned at the top */
+  gap: 2rem; /* spacing between text and image */
+}
+
+.hero-text {
+  flex: 1; /* takes up more space (left side) */
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  padding-left: 3vw;
+  color: #fff;
+}
+
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  top: 2%;      /* adjust vertical position */
+  right: 5%;     /* pushes it to the far right */
+}
+
+.hero-image img {
+  width: 40vw;
+  height: auto;
+  
+}
 
 .hero-header h1 {
-  font-family: 'DynaPuff', cursive;
+  font-family: product-sans, sans-serif;
   font-weight: bold;
-  font-size: 5rem; /* make it stand out */
-  margin-bottom: 1rem; /* spacing between header and section */
+  font-size: 5rem;
+  margin-bottom: 1rem;
   padding-left: 3vw;
   padding-top: 3vw;
-  z-index: 99;
-  color:#eea8b7
+  color: #f89899;
 }
 
 .hero-section {
@@ -18,99 +80,47 @@
   min-height: 400px;
   margin-left: 4vw;
   align-items: center;
-  background: #caaaba;
   border-radius: 2rem;
-  box-shadow: 0 4px 32px 0 rgba(255, 192, 203, 0.08);
-  color: #2d2d2d;
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-  background-image: url("../Images/Paper Texture.jpg");
-  background-blend-mode: overlay;
-  z-index: 0;
+  color: #fff;
+  font-family: product-sans, sans-serif;
+  position: relative; /* creates stacking context */
+  z-index: 1;         /* ensures hero sits above background */
 }
 
-/* Laptop Responsive styles */
-@media (max-width: 900px) {
-  .hero-section {
-    width: 90vw;
-    margin-left: 5vw;
-    height: auto;
-    min-height: 320px;
-    padding: 2rem 1.2rem;
-    max-width: 98vw;
-  }
-  .hero-section h1 {
-    font-size: 2rem;
-  }
-  .hero-section p {
-    font-size: 1rem;
-  }
-}
+.hero-button {
+  background-color: #f89899;
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  box-shadow: #1a001a 4px 4px 0 0;
+  color: #1a001a;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  font-family: Satoshi, Arial, sans-serif;
+  transition: color 0.3s ease, background-color 0.3s ease;
 
-/* Phone Responsive */
-@media (max-width: 600px) {
-  .hero-section {
-    width: 98vw;
-    margin-left: 1vw;
-    padding: 1.2rem 0.5rem;
-    border-radius: 1rem;
-    min-width: unset;
-    max-width: 100vw;
-    box-shadow: 0 2px 12px 0 rgba(255, 192, 203, 0.08);
-  }
-  .hero-section h1 {
-    font-size: 0.2rem;
-    margin-bottom: 0.8rem;
-  }
-  .hero-section p {
-    font-size: 0.95rem;
-  }
-  .hero-button {
-    width: 100%;
-    padding: 0.75rem 0;
-    font-size: 1rem;
-  }
-  .hero-section ul {
-    gap: 0.5rem;
-  }
-
-  header {
-    padding: 0.5rem 0.5rem;
-    font-size: 1rem;
-  }
-
-  .hero-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Make the image responsive */
-  #hero-image img {
-    width: 85%;
-    height: auto;
-    border-radius: 1rem;
-  }
-
-/* Keep header and hero visually separate */
-header {
-  width: 100vw;
-  background: #fff;
-  box-shadow: 0 2px 8px 0 rgba(200, 170, 186, 0.08);
-  position: relative;
+  position: relative; /* ensure button itself is on top */
   z-index: 2;
 }
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #d16b6c;
+  color: #ffedf8;
+  outline: 2px solid #f7def3;
+  outline-offset: 2px;
+  text-decoration: none;
 }
 
-/* Tablet Responsive */
-@media (max-width: 768px) {
-  .hero-wrapper {
-    flex-direction: column;
-  }
-
-  .hero-section,
-  #hero-image {
-    max-width: 100%;
-    justify-content: center;
-  }
+.hero-button:active {
+  box-shadow: #1a001a 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
