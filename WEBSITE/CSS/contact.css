@@ -4,17 +4,8 @@
 :root {
   --letter-size: 75vw;
   --letter-color: #FFF9F0;
-  --bg-color: #E3D9CF;
   --letter-color-light: #FDF6E3;
   --letter-color-dark: #E6DCCF;
-}
-
-body {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  background: var(--bg-color);
 }
 
 form {
@@ -48,34 +39,39 @@ form > textarea {
   font-size: calc(1.2vw + 8px);
 }
 
-form > input[type="button"] {
+form > button {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(300%) translateY(100%);
-  width: 8vw;
-  height: 8vw;
+  
+  width: 10vw;
+  height: 10vw;
   min-width: 50px;
   min-height: 50px;
   max-width: 100px;
   max-height: 100px;
+
   border-radius: 50%;
   border: none;
-  color: var(--letter-color-dark);
   background: #F64740;
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: transform 1s ease-in-out, background 0.3s ease-in, color 0.3s ease-in;
+  color: var(--letter-color-dark);
   font-size: calc(1vw + 6px);
+  cursor: pointer;
+
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease-in-out, background 0.3s ease-in, color 0.3s ease-in;
   will-change: transform;
+
+  /* ✅ centers the text perfectly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form > input[type="button"].animate {
-  transform: translate(-50%, -130%);
-  background: #C63D2F;
-  color: transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+/* Optional: remove default focus outline for a cleaner look */
+form > button:focus {
+  outline: none;
 }
 
 #sendEmail:hover {
@@ -85,9 +81,9 @@ form > input[type="button"].animate {
 
 .letter {
   width: 75vw;
-  height: 45vw;
+  height: 35vw;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: var(--letter-color);

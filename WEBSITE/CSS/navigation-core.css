@@ -9,21 +9,34 @@
 	font-family: sans-serif;
 }
 
-html {
-	height: 100%;
-	width: 100%;
-    margin: 0;
-    padding: 0;
+body, html {
+  padding: 0;
+  margin: 0;
+  background-color: #330033;
+  overflow-x: hidden;
 }
 
-body {
-	line-height: 1.6;
-	max-width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden; /* allow vertical scrolling, prevent horizontal */
-    position: relative;
-    margin: 0;
-    padding: 0;
+#bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../Images/branding-logo.png');
+  background-size: 100px 100px;
+  height: 100vh;
+  width: 100vw;
+  animation: scroll 90s infinite linear;
+  opacity: 0.05;
+  background-repeat: repeat;
+  z-index: 0; /* stays at the very back */
+  pointer-events: none; /* ensures it never blocks clicks */
+}
+
+@keyframes scroll {
+  100% {
+    background-position: -3000px 0px;
+  }
 }
 
 /*.background {
@@ -50,7 +63,7 @@ body {
     flex-wrap: wrap;
     position: sticky;
     z-index: 10;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(51,0,51,0.01)); /* black with 60% opacity */
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(51,0,51,0.00)); /* black with 60% opacity */
     -webkit-backdrop-filter: blur(8px);   /* Safari support */   
     backdrop-filter: blur(8px);           /* optional: adds blur effect behind navbar */
 }
@@ -69,6 +82,7 @@ body {
     display: flex;
     gap: 30px;
     top: 2rem;
+    padding-right: 2rem;
 }
 
 /* Button styling from: https://getcssscan.com/css-buttons-examples, by UIForms */

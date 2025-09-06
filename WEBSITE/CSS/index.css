@@ -1,11 +1,4 @@
-body, html {
-  padding: 0;
-  margin: 0;
-  background-color: #330033;
-  overflow: hidden;
-}
-		
-#bg {
+  #bg {
   position: fixed;
   left: 0;
   top: 0;
