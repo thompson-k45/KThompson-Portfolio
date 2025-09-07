@@ -20,16 +20,17 @@
   <!-- Styles -->
   <link rel="stylesheet" href="../CSS/one-page.css">
   <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/modal-contact.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
 
   <!-- Scripts -->
   <script src="../JavaScript/jquery-3.7.1.min.js"></script>
   <script src="../JavaScript/navigation-core.js"></script>
   <script src="../JavaScript/contact.js"></script>
+  <script src="../JavaScript/contact-modal.js" defer></script>
   <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </head>
 <body>
@@ -43,10 +44,10 @@
         <img src="../Images/branding-logo.png" alt="Katie Thompson Main Logo" id="logo">
       </a>
       <ul>
-        <li><a href="#aboutme" class="nav-button">About Me</a></li>
+        <li><a href="#about-me" class="nav-button">About Me</a></li>
         <li><a href="#projects" class="nav-button">Projects</a></li>
         <li><a href="#cv" class="nav-button">CV</a></li>
-        <li><a href="#contact" class="nav-button">Contact</a></li>
+        <li><a href="#contact" class="nav-button" id="contact-button">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -81,104 +82,23 @@
   </section>
 
     <!-- About Me Section -->
-    <section id="about-me" class="container">
+    <section id="about-me" class="container-a">
+      <h1 id="kainos">Kainos Women in Computing Award 2025 Winner</h1>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="container">
+    <section id="projects" class="container-b">
     </section>
 
   <!-- CV Section -->
-  <section id="cv" class="container">
-    <header class="text-center mb-4">
-      <h1>Katie Thompson</h1>
-      <p>Holywood, Co. Down</p>
-      <p><a href="mailto:kathompson879@gmail.com">kathompson879@gmail.com</a></p>
-      <p><a href="tel:07902721808">07902721808</a></p>
-      <p>
-        <a href="https://www.linkedin.com/in/katie-thompson-66268b211/" target="_blank" rel="noopener">
-          LinkedIn Profile
-        </a>
-      </p>
-      <p>
-        <a href="../File Host/Katie_Thompson_CV.pdf" download class="btn btn-primary">Download CV as PDF</a>
-      </p>
-    </header>
+    <section id="cv" class="container-a">
+    </section>  
 
-    <section>
-      <h2>Personal Profile</h2>
-      <p>Highly motivated Interactive Computing undergraduate with a passion for UX/UI, software development, and digital innovation...</p>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Ulster University (2024 - 2028)</strong> – BSc Interactive Computing – Avg. 81%</li>
-        <li><strong>Sullivan Upper School (2015 - 2022)</strong> – A2s: Business, Politics, English Lit (A*-B); 10 GCSEs incl. CS, Maths, Biology (A*-A)</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming: Python, JavaScript, Visual Basic, PowerShell</li>
-        <li>Web: HTML5, CSS, jQuery</li>
-        <li>IDEs: VSCode, PyCharm, Visual Studio, Sublime Text</li>
-        <li>Design: Photoshop, Illustrator, Blender, Canva</li>
-        <li>OS: Windows, Android, iOS</li>
-      </ul>
-    </section>
-
-    <section id="competencies">
-      <h2>Competencies/Soft Skills</h2>
-      <ul>
-        <li>Detail-Oriented Problem Solving</li>
-        <li>Customer Service & Communication</li>
-        <li>Time Management</li>
-        <li>Teamwork</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>Product Design: Designed a wearable health tech product...</li>
-        <li>Web Development: Collaborative hotel website prototype...</li>
-        <li>Graphic Design: Delivered 12 educational graphics for school...</li>
-        <li>Databases: Designed relational SQL database for mechanic store...</li>
-      </ul>
-    </section>
-
-    <section id="badges">
-      <h2>Additional Certificates</h2>
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b425ef25-96a4-4db0-b2a3-439d811a7e3a" data-share-badge-host="https://www.credly.com"></div>
-      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="b3bc57c7-8646-42c9-9cbe-5d9c707a4542" data-share-badge-host="https://www.credly.com"></div>
-    </section>
-
-    <section id="employment">
-      <h2>Employment</h2>
-      <h3>Little Wing Ltd — Waiting Staff</h3>
-      <ul>
-        <li>Resolved customer issues and relayed feedback across departments</li>
-      </ul>
-    </section>
-
-    <section id="achievements">
-      <h2>Achievements & Memberships</h2>
-      <ul>
-        <li>Kainos Women in Computing Award 2025</li>
-        <li>UUSU Course Representative</li>
-      </ul>
-    </section>
-
-    <section id="references">
-      <h2>References</h2>
-      <p>Available upon request. Use my <a href="#contact">contact form</a>.</p>
-    </section>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
+<!-- Contact Modal -->
+<div id="contactModal" class="modal">
+  <section id="contact" class="modal-content">
+    <span class="close">&times;</span>
+    
     <h2>Contact Me</h2>
     <div class="letter">
       <form>
@@ -188,11 +108,13 @@
         <button type="submit" id="sendEmail">Send</button>
       </form>
     </div>
-    <div class="userfeedback">
+    <div class="userfeedback" style="display:none;">
       <p>Message sent, thank you! Please monitor your email for a reply.</p>
       <input type="button" id="newMessage" value="Send Another Message">
     </div>
   </section>
+</div>
+
 
   <!-- Bootstrap JS -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

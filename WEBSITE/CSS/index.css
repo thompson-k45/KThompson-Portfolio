@@ -35,7 +35,7 @@
 .hero-section p {
   font-size: 1.5rem;
   line-height: 1.4;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.25rem;
   padding-left: 3vw;
   color: #fff;
 }
@@ -46,21 +46,20 @@
 
 .hero-image {
   position: absolute;
-  top: 2%;      /* adjust vertical position */
-  right: 5%;     /* pushes it to the far right */
+  top: 7%;      /* adjust vertical position */
+  right: 7%;     /* pushes it to the far right */
 }
 
 .hero-image img {
-  width: 40vw;
+  width: 35vw;
   height: auto;
-  
 }
 
 .hero-header h1 {
   font-family: product-sans, sans-serif;
   font-weight: bold;
   font-size: 5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   padding-left: 3vw;
   padding-top: 3vw;
   color: #f89899;
@@ -76,7 +75,6 @@
   border-radius: 2rem;
   color: #fff;
   font-family: product-sans, sans-serif;
-  position: relative; /* creates stacking context */
   z-index: 1;         /* ensures hero sits above background */
 }
 

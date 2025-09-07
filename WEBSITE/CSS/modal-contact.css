@@ -1,0 +1,201 @@
+/* CONTACT SECTION */
+#contact {
+  position: relative;
+  margin: 0 auto; /* center in modal */
+  width: 75vw;    /* 75% of viewport width */
+  max-width: 75vw;
+  height: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Form inside flow */
+#contact form {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* let it expand fully */
+  margin: 0 auto;
+  padding: 3rem;   /* slightly larger padding */
+  box-sizing: border-box;
+  font-family: 'Marck Script', cursive;
+  font-size: 1.5rem; /* bigger text */
+  z-index: 1;
+}
+
+#contact form > input,
+#contact form > textarea {
+  display: block;
+  width: 100%;
+  padding: 1.2rem; /* bigger padding */
+  margin: 1.2rem 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 3px dotted #a89f91; /* thicker underline */
+  outline: none;
+  font-family: inherit;
+  resize: none;
+  background: transparent;
+  color: #3a3a3a;
+  font-size: 1.4rem; /* larger font size */
+}
+
+#contact form > button {
+  margin-top: 2rem;
+  width: 100px;   /* bigger circular button */
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background: #F64740;
+  color: var(--letter-color-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  transition: transform 1s ease-in-out, background 0.3s ease-in, color 0.3s ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact form > button:hover {
+  background: #E26D5C;
+  color: #3a3a3a;
+}
+
+/* LETTER ANIMATION BOX */
+.letter {
+  width: 100%;
+  max-width: 75vw;  /* envelope as wide as form */
+  height: 75vh;     /* taller: 75% of viewport height */
+  margin: 2rem auto 0 auto;
+  position: relative;
+  background: var(--letter-color);
+  transition: top 1.5s ease-in-out, opacity 1.5s ease-in-out;
+  opacity: 1;
+  z-index: 50;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.letter.fly-away {
+  animation: flyUp 1.5s ease-in-out forwards;
+}
+
+.letter.reset-entry {
+  top: 150%;
+  opacity: 0;
+}
+
+.letter::before {
+  content: '';
+  position: absolute;
+  top: -37.5vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  height: 0;
+  border-style: solid;
+  border-width: 0 37.5vw 37.5vh 34vw;
+  border-color: transparent transparent var(--letter-color-dark) transparent;
+  transform-origin: 100% 100%;
+  transform: rotateX(0deg);
+  transition: transform 1s ease-in, border-color 1s ease-in;
+}
+
+.letter.animate::before {
+  border-color: transparent transparent var(--letter-color-light) transparent;
+  transform: rotateX(180deg);
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200%) scale(0.9);
+    opacity: 0;
+  }
+}
+
+/* FEEDBACK MESSAGE */
+.userfeedback {
+  display: none;
+  text-align: center;
+  margin-top: 2em;
+  font-size: calc(1.2vw + 10px);
+  color: #ddd0d0;
+}
+
+/* VARIABLES */
+:root {
+  --letter-size: 75vw;
+  --letter-color: #FFF9F0;
+  --letter-color-light: #FDF6E3;
+  --letter-color-dark: #E6DCCF;
+}
+
+/* Modal background overlay */
+/* Overlay */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  --backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* start hidden */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* When active */
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Centered modal content */
+/* Modal content wrapper (centered) */
+.modal-content {
+  background: transparent;
+  width: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 0; /* let #contact handle spacing */
+  border-radius: 0;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Animate in */
+.modal.show .modal-content {
+  transform: scale(1);
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color:#FFF9F0;
+}
+
+
+.close:hover {
+  color: #a02c2c;
+}
