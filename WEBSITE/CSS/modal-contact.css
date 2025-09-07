@@ -160,7 +160,6 @@
   pointer-events: auto;
 }
 
-/* Centered modal content */
 /* Modal content wrapper (centered) */
 .modal-content {
   background: transparent;
@@ -176,6 +175,7 @@
   align-items: center;
   justify-content: center;
   overflow: visible;
+  border: transparent;
 }
 
 /* Animate in */
@@ -194,7 +194,6 @@
   cursor: pointer;
   color:#FFF9F0;
 }
-
 
 .close:hover {
   color: #a02c2c;
