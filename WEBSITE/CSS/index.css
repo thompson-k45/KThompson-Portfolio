@@ -51,7 +51,7 @@
 }
 
 .hero-image img {
-  width: 35vw;
+  width: 30vw;
   height: auto;
 }
 
@@ -62,13 +62,13 @@
   margin-bottom: 0.5rem;
   padding-left: 3vw;
   padding-top: 3vw;
-  color: #f89899;
+  color:#f89899
 }
 
 .hero-section {
-  width: 25vw;
+  width: 55vw;
   max-width: auto;
-  height: 70vh;
+  height: 55vh;
   min-height: 400px;
   align-items: left;
   border-radius: 2rem;
@@ -131,4 +131,5 @@
   gap: 1rem; /* space between buttons */
   justify-content: center; /* centers them horizontally in the container */
   align-items: center;
+  margin-left: 3vw;
 }

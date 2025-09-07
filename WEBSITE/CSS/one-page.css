@@ -5,7 +5,13 @@
   font-display: swap;
 }
 
-/* GLOBAL RESET */
+hr.rounded {
+  border-top: 8px solid #88698c;
+  border-radius: 5px;
+  margin: 2rem auto;
+  width: 95%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -198,13 +204,14 @@ a:focus-visible {
 }
 
 /* Award Styling */
-#kainos {
-  padding: 1rem;
-  margin: 1rem 0;
-  text-align: center;
-  width: auto;
-  font-weight: 1000;
-  font-size: 2.5rem;
+.about-header h1 {
+  font-family: product-sans, sans-serif;
+  font-weight: bold;
+  font-size: 4.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 3vw;
+  padding-top: 3vw;
+  color:#f89899
 }
 
 /* CV SECTION Download Button */
