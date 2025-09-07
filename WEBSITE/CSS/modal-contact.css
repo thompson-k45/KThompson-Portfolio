@@ -147,6 +147,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background:rgba(56, 2, 49, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   /* start hidden */
   opacity: 0;
@@ -176,6 +179,7 @@
   justify-content: center;
   overflow: visible;
   border: transparent;
+  --webkit-backdrop-filter: blur(8px); /* Safari */;
 }
 
 /* Animate in */
@@ -190,9 +194,9 @@
   right: 16px;
   font-size: 28px;
   border: 0;
-  background: transparent;
   cursor: pointer;
   color:#FFF9F0;
+  opacity:1
 }
 
 .close:hover {

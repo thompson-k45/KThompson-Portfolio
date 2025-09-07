@@ -67,18 +67,25 @@
 
 .hero-section {
   width: 25vw;
-  max-width: 600px;
+  max-width: auto;
   height: 70vh;
   min-height: 400px;
-  margin-left: 4vw;
-  align-items: center;
+  align-items: left;
   border-radius: 2rem;
   color: #fff;
   font-family: product-sans, sans-serif;
   z-index: 1;         /* ensures hero sits above background */
+  align-items: left;
 }
 
-.hero-button {
+.hero-content {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  align-items: flex-start; /* or center, depending on design */
+  text-align: left;
+}
+
+.hero-button, .cv-button {
   background-color: #f89899;
   border: 2px solid #FFFFFF;
   border-radius: 30px;
@@ -97,7 +104,6 @@
   touch-action: manipulation;
   font-family: Satoshi, Arial, sans-serif;
   transition: color 0.3s ease, background-color 0.3s ease;
-
   position: relative; /* ensure button itself is on top */
   z-index: 2;
 }
@@ -114,4 +120,15 @@
 .hero-button:active {
   box-shadow: #1a001a 2px 2px 0 0;
   transform: translate(2px, 2px);
+}
+
+.download-icon {
+  vertical-align: middle;;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem; /* space between buttons */
+  justify-content: center; /* centers them horizontally in the container */
+  align-items: center;
 }
