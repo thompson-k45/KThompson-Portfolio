@@ -167,7 +167,7 @@ a.nav-button:active {
   z-index: 5;
   max-width: 100%;
   width: auto;
-  margin: 0.5rem auto;
+  margin: auto;
   color: #fcc4e9;
   font-weight: 600;
   font-family: Satoshi;
@@ -183,18 +183,16 @@ a {
   text-decoration: underline;
 }
 
-/* Hover and focus — exclude nav buttons */
+a:active {
+  color: #FF0000;
+}
+
 a:not(.nav-button):hover,
 a:not(.nav-button):focus {
   color: #0B0080;
   background-color: #e6f0ff;
   text-decoration: underline;
   outline: none;
-}
-
-/* Active Links */
-a:active {
-  color: #FF0000;
 }
 
 /* Keyboard focus */

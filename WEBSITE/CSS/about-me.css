@@ -1,0 +1,45 @@
+.dynamic-wrapper{
+	position: relative;
+    padding-left: 3vw;
+    padding-top: 1vw;
+    width:90%;
+}
+.dynamic-sentence{
+    margin: 0;
+    text-align: left;
+    font-size:24px;
+    text-shadow: 1px 1px 1px rgba(160, 79, 79, 0.8);
+}
+.dynamic-sentence span{
+	color: #ffffff;
+	font-size: 200%;
+	font-weight: normal;
+}
+.dynamic-words{
+	display: inline;
+	text-indent: 10px;
+}
+.dynamic-words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	color: #f89899;
+	transform-origin: 15px 44px;
+    animation: rotateWord 18s ease infinite 0s;
+}
+
+.dynamic-text {
+      font-weight: 600;
+      color: #e06c75;
+      border-right: 2px solid #e06c75;
+      white-space: nowrap;
+      display: inline-block;
+      padding-right: 5px;
+      animation: blink 0.8s step-end infinite;
+      vertical-align: bottom;
+    }
+
+@keyframes blink {
+    0%, 49% { border-color: #e06c75; }
+      50%, 100% { border-color: transparent; }
+    }
