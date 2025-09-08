@@ -1,25 +1,14 @@
-// Get elements
-const modal = document.getElementById("contactModal");
-const closeBtn = document.querySelector(".close");
 const contactBtn = document.getElementById("contact-button");
 
-// Open modal when nav button is clicked
 contactBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // stop the page from scrolling to #contact
-  modal.style.display = "block";
-  setTimeout(() => modal.classList.add("show"), 10); // animate in
-});
+  e.preventDefault();
 
-// Close modal when X is clicked
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-  setTimeout(() => modal.style.display = "none", 300);
-});
+  const recipient = "kathompson879@gmail.com";
+  const subject = encodeURIComponent("RE: Portfolio Website");
+  const body = encodeURIComponent("Hi, I would like to get in touch with you.\n\n");
 
-// Close modal when clicking outside the section
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.remove("show");
-    setTimeout(() => modal.style.display = "none", 300);
-  }
+  const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+  // Open the mailto link
+  window.open(mailtoLink, "_blank");
 });

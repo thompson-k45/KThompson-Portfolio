@@ -1,0 +1,42 @@
+.contact-links {
+  display: flex;
+  justify-content: center; /* center the group */
+  align-items: center;
+  gap: 1.5rem; /* space between buttons */
+  margin-top: 1rem;
+}
+
+/* Base style for buttons */
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  font-weight: lighter;
+  color: #000;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover effect */
+.icon-button:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
+
+/* Specific icon colors */
+.email-icon svg {
+  fill: #ff758c; /* pink for email */
+}
+
+.linkedin-icon svg {
+  fill: #0077B5; /* LinkedIn blue */
+}
+
+/* SVG size */
+.icon-button svg {
+  width: 24px;
+  height: 24px;
+}

@@ -42,7 +42,13 @@ body {
   flex-wrap: wrap;
   position: fixed;
   z-index: 100;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(51,0,51,0.00));
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,   /* darker at top */
+    rgba(0, 0, 0, 0.20) 40%,  /* smooth fade */
+    rgba(0, 0, 0, 0.05) 80%,  /* almost gone */
+    rgba(0, 0, 0, 0) 100%     /* fully transparent bottom */
+  );
   -webkit-backdrop-filter: blur(8px); /* Safari */
   backdrop-filter: blur(8px);
 }
@@ -65,7 +71,7 @@ body {
 }
 
 /* BUTTON STYLING */
-a.nav-button {
+a.nav-button, .contact-button {
   background-color: #f89899;
   border: 2px solid #FFFFFF;
   border-radius: 30px;
@@ -87,7 +93,9 @@ a.nav-button {
 }
 
 a.nav-button:hover,
-a.nav-button:focus {
+a.nav-button:focus,
+.contact-button:hover,
+.contact-button:focus {
   background-color: #d16b6c;
   color: #FFD700;
   outline: 2px solid #FFD700;
@@ -95,7 +103,8 @@ a.nav-button:focus {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-a.nav-button:active {
+a.nav-button:active,
+.contact-button:active {
   box-shadow: #1a001a 2px 2px 0 0;
   transform: translate(2px, 2px);
 }

@@ -1,0 +1,16 @@
+/* Footer container */
+.site-footer {
+  background-color: #0f0a0d; /* dark background */
+  color: #f0f0f0;           /* light text */
+  text-align: center;        /* center content */
+  padding: 2rem 1rem;        /* vertical and horizontal padding */
+  font-size: 0.9rem;         /* slightly smaller text */
+  line-height: 1.5;          /* better readability */
+  border-top: 2px solid #270616; /* optional accent line at top */
+  z-index: 2;
+  position: relative;
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+}
