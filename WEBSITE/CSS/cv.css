@@ -1,0 +1,92 @@
+.cv-download {
+  background-color: #f89899;
+  border: 2px solid #FFFFFF;
+  border-radius: 30px;
+  box-shadow: #1a001a 4px 4px 0 0;
+  color: #1a001a;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  font-family: Satoshi, Arial, sans-serif;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  position: relative; /* ensure button itself is on top */
+  z-index: 2;
+  margin-bottom: 4rem;
+}
+
+#cv {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centres horizontally */
+}
+
+/* layout container */
+.certs {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* badge list */
+.certs-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* each list item provides a sizing context for the iframe */
+.certs-content li {
+  flex: 0 0 auto;
+  width: 320px;            /* make each card wide enough to show full text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* the element that Credly replaces - give it full width inside the li */
+.certs-content div[data-share-badge-id] {
+  width: 100%;
+}
+
+/* force the iframe element itself to use the li width (important) */
+.certs-content iframe {
+  width: 100% !important;
+  height: 270px !important;
+  min-height: 270px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-sizing: border-box;
+}
+
+.certs-content iframe:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .certs-content li { width: 280px; }
+}
+@media (max-width: 600px) {
+  .certs-content { gap: 1rem; }
+  .certs-content li { width: 100%; max-width: 420px; }
+  .certs-content iframe { height: auto !important; min-height: 200px; }
+}

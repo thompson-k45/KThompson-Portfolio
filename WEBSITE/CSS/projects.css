@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .projects-container {
+    max-width: 100%;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .projects-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #ff758c;
+    font-weight: bold;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    color: #f8c9e3;
+    font-weight: lighter;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: visible;
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .project-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 1;
+  }
+
+  .project-card h3 {
+    margin-top: 0;
+    color: #4e1149;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    z-index: 2;
+  }
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.projects-grid::-webkit-scrollbar {
+    height: 6px; /* thin horizontal scrollbar */
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: #e7e1e115; /* subtle background */
+    border-radius: 3px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background-color: #d42577; /* main color */
+    border-radius: 3px;
+}
+
+/* Hover effect (optional, subtle) */
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background-color: #d42577;
+}
+
+/* Firefox Styling (doesn't support webkit) */
+.projects-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #d42577 #e7e1e115;
+}

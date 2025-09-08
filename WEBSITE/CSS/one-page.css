@@ -20,7 +20,7 @@ hr.rounded {
 
 body {
   font-family: Satoshi, Arial, sans-serif;
-  padding: 0;
+  padding-top: 100px;
   margin: 0;
   background-color: #330033;
   overflow-x: hidden;
@@ -40,7 +40,7 @@ body {
   left: 0;
   width: 100%;
   flex-wrap: wrap;
-  position: sticky;
+  position: fixed;
   z-index: 100;
   background: linear-gradient(rgba(0,0,0,0.2), rgba(51,0,51,0.00));
   -webkit-backdrop-filter: blur(8px); /* Safari */
@@ -146,24 +146,7 @@ a.nav-button:active {
   }
 }
 
-/* TEXT CONTAINER STYLE A */
-.container-a {
-  position: relative;
-  background-color: #f89899;
-  padding: 2rem;
-  z-index: 5;
-  max-width: 90%;
-  width: auto;
-  color: #1B1212;
-  font-weight: 600;
-  font-family: Satoshi;
-  align-items: center;
-  margin: auto;
-  border-radius: 2rem;
-}
-
-/* TEXT CONTAINER STYLE B */
-.container-b {
+.container {
   position: relative;
   padding: 2rem;
   z-index: 5;
@@ -183,22 +166,4 @@ a.nav-button:active {
 a:focus-visible {
   outline: 3px solid #ffbf47;
   outline-offset: 2px;
-}
-
-/* CV SECTION Download Button */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5em;
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.icon {
-  margin-right: 8px;
-  vertical-align: middle;
 }
