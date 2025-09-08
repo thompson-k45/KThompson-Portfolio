@@ -1,4 +1,19 @@
-  #bg {
+/* Add this to the top of your CSS to prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  padding-top: 80px;
+  overflow-x: hidden; /* prevents horizontal scrolling */
+  width: 100%;
+}
+
+#bg {
   position: fixed;
   left: 0;
   top: 0;
@@ -23,7 +38,7 @@
 
 .hero-content {
   display: flex;
-  justify-content: space-between;;
+  justify-content: space-between;
   align-items: flex-start; /* keeps text + image aligned at the top */
   gap: 2rem; /* spacing between text and image */
 }
@@ -42,6 +57,8 @@
 
 .hero-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 100vw; /* prevent overflow */
 }
 
 .hero-image {
@@ -53,6 +70,7 @@
 .hero-image img {
   width: 30vw;
   height: auto;
+  max-width: 100%; /* prevent image overflow */
 }
 
 .hero-header h1 {
@@ -62,12 +80,13 @@
   margin-bottom: 0.5rem;
   padding-left: 3vw;
   padding-top: 3vw;
-  color:#f89899
+  color: #f89899;
+  word-wrap: break-word; /* prevent text overflow */
 }
 
 .hero-section {
   width: 55vw;
-  max-width: auto;
+  max-width: calc(100vw - 2rem); /* prevent overflow with padding */
   height: 55vh;
   min-height: 400px;
   align-items: left;
@@ -75,7 +94,7 @@
   color: #fff;
   font-family: product-sans, sans-serif;
   z-index: 1;         /* ensures hero sits above background */
-  align-items: left;
+  box-sizing: border-box; /* include padding in width calculations */
 }
 
 .hero-content {
@@ -89,6 +108,7 @@
 @media (max-width: 992px) {
   .hero-section {
     width: 90vw;
+    max-width: calc(100vw - 2rem);
     margin: 0 auto;        /* center hero-section */
     height: auto;
     padding: 2rem;
@@ -98,67 +118,95 @@
     align-items: center;   /* center all children */
     text-align: center;
   }
-
+  
   .hero-content {
     flex-direction: column;  /* stack text and image vertically */
     align-items: center;     /* center content */
     text-align: center;      /* center text */
     gap: 1.5rem;             /* spacing between sections */
+    width: 100%;
   }
-
+  
+  .hero-text {
+    width: 100%;
+  }
+  
   .hero-text p {
     font-size: 1.2rem;       /* smaller font for readability */
     padding-left: 0;         /* remove horizontal padding */
+    padding-right: 0;        /* ensure no right padding */
   }
-
+  
   .hero-image {
     position: relative;    /* remove absolute positioning */
     top: 0;
     right: 0;
     width: 60%;
+    max-width: 300px;      /* prevent image from being too large */
     margin: 0 auto;        /* center the image */
   }
-
+  
   .hero-image img {
     width: 100%;
     height: auto;
     margin-top: 3rem;      /* spacing above image */
   }
 
-.hero-header {
+  .hero-header {
     text-align: center;     /* center the h1 */
     width: 100%;            /* take full width */
     margin: 0 auto;         /* ensure centered in the section */
     padding-left: 0;        /* remove leftover padding */
+    padding-right: 0;       /* ensure no right padding */
     padding-top: 1rem;      /* optional spacing from top */
   }
-
+  
   .hero-header h1 {
     font-size: 3rem;        /* scale down header for mobile */
+    word-wrap: break-word;  /* prevent text overflow */
+    hyphens: auto;          /* allow hyphenation if needed */
   }
 }
 
-  .background {
+/* Fix background for mobile */
+@media (max-width: 768px) {
+  #bg {
     background-size: 50px 50px; /* shrink repeated background logos */
   }
+}
 
 @media (max-width: 576px) {
   .hero-section {
     width: 95vw;
+    max-width: calc(100vw - 1rem);
     padding: 1rem;
     min-height: auto;
   }
-
+  
   .hero-text p {
     font-size: 1rem;
     line-height: 1.4;
   }
-
+  
   .hero-header h1 {
     font-size: 2.2rem;
+    padding: 0;
+    margin: 0 0 0.5rem 0;
   }
-
+  
   .hero-image {
     width: 80%;
+    max-width: 250px;
+  }
+  
+  #bg {
+    background-size: 30px 30px; /* even smaller background for very small screens */
+  }
+}
+
+/* Additional viewport fix */
+@media (max-width: 480px) {
+  .hero-header h1 {
+    font-size: clamp(1.8rem, 8vw, 2.2rem); /* responsive font size */
   }
 }

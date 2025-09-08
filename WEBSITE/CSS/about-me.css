@@ -74,19 +74,21 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .dynamic-sentence {
   margin: 0;
   text-align: center;
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   text-shadow: 1px 1px 1px rgba(160, 79, 79, 0.8);
 }
 
 /* Static part of the sentence */
 .static-text {
   color: #ffffff;
-  font-size: 200%;
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: normal;
 }
 
@@ -99,12 +101,28 @@
   padding-right: 5px;
   animation: blink 0.8s step-end infinite;
   vertical-align: bottom;
-  font-size: 200%;
+  font-size: clamp(1rem, 5vw, 2rem);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 @keyframes blink {
     0%, 49% { border-color: #e6d2d4; }
     50%, 100% { border-color: transparent; }
+}
+
+/* Additional mobile-specific adjustments */
+@media screen and (max-width: 768px) {
+  .dynamic-wrapper {
+    width: 95%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  
+  .dynamic-text {
+    white-space: normal; /* Allow wrapping on very small screens if needed */
+    word-break: break-word;
+  }
 }
 
 /* About Me Body */

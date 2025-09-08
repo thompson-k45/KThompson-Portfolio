@@ -35,6 +35,7 @@
   margin: 2rem auto;
   padding: 1rem;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 /* badge list */
@@ -56,6 +57,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 /* the element that Credly replaces - give it full width inside the li */
@@ -89,4 +91,134 @@
   .certs-content { gap: 1rem; }
   .certs-content li { width: 100%; max-width: 420px; }
   .certs-content iframe { height: auto !important; min-height: 200px; }
+}
+
+/* Responsive iframe container using aspect ratio technique */
+.pdf-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Maximum width for desktop */
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Create responsive aspect ratio */
+.pdf-container::before {
+  content: "";
+  display: block;
+  padding-top: 75%; /* 4:3 aspect ratio (height = 75% of width) */
+}
+
+.pdf-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+/* Mobile optimizations */
+@media (max-width: 992px) {
+  #cv {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .pdf-container {
+    max-width: 95vw;
+  }
+  
+  /* Adjust aspect ratio for mobile - make it taller */
+  .pdf-container::before {
+    padding-top: 120%; /* Taller aspect ratio for mobile viewing */
+  }
+}
+
+@media (max-width: 768px) {
+  #cv {
+    padding: 2rem 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .pdf-container {
+    max-width: 98vw;
+    border-radius: 8px;
+  }
+  
+  .pdf-container iframe {
+    border-radius: 8px;
+  }
+  
+  /* Even taller for small screens */
+  .pdf-container::before {
+    padding-top: 140%;
+  }
+}
+
+@media (max-width: 576px) {
+  #cv {
+    padding: 1.5rem 0.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pdf-container {
+    border-radius: 6px;
+  }
+  
+  .pdf-container iframe {
+    border-radius: 6px;
+  }
+  
+  /* Maximum height for very small screens */
+  .pdf-container::before {
+    padding-top: 150%;
+  }
+}
+
+/* Alternative: Fixed height approach for very small screens */
+@media (max-width: 480px) {
+  .pdf-container::before {
+    display: none; /* Remove aspect ratio */
+  }
+  
+  .pdf-container {
+    height: 60vh; /* Fixed height based on viewport */
+    min-height: 400px;
+  }
+  
+  .pdf-container iframe {
+    position: static; /* Remove absolute positioning */
+    width: 100%;
+    height: 100%;
+  }
 }

@@ -21,32 +21,32 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/x-icon" href="/Images/Favicon/favicon-32x32.png">
 
 
   <!-- Styles -->
-  <link rel="stylesheet" href="../CSS/one-page.css">
-  <link rel="stylesheet" href="../CSS/index.css">
-  <link rel="stylesheet" href="../CSS/modal-contact.css">
-  <link rel="stylesheet" href="../CSS/about-me.css">
-  <link rel="stylesheet" href="../CSS/marquee.css">
-  <link rel="stylesheet" href="../CSS/projects.css">
-  <link rel="stylesheet" href="../CSS/cv.css">
-  <link rel="stylesheet" href="../CSS/contact.css"> 
-  <link rel="stylesheet" href="../CSS/footer.css">
+  <link rel="stylesheet" href="/CSS/one-page.css">
+  <link rel="stylesheet" href="/CSS/index.css">
+  <link rel="stylesheet" href="/CSS/modal-contact.css">
+  <link rel="stylesheet" href="/CSS/about-me.css">
+  <link rel="stylesheet" href="/CSS/marquee.css">
+  <link rel="stylesheet" href="/CSS/projects.css">
+  <link rel="stylesheet" href="/CSS/cv.css">
+  <link rel="stylesheet" href="/CSS/contact.css"> 
+  <link rel="stylesheet" href="/CSS/footer.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Scripts -->
-  <script src="../JavaScript/jquery-3.7.1.min.js"></script>
-  <script src="../JavaScript/navigation-core.js"></script>
-  <script src="../JavaScript/contact.js"></script>
-  <script src="../JavaScript/contact-modal.js" defer></script>
-  <script src="../JavaScript/dynamic-text-about-me.js" defer></script>
-  <script src="../JavaScript/marquee.js"></script>
-  <script src="../JavaScript/cert-badges.js" defer></script>
+  <script src="/JavaScript/jquery-3.7.1.min.js"></script>
+  <script src="/JavaScript/navigation-core.js"></script>
+  <script src="/JavaScript/contact.js"></script>
+  <script src="/JavaScript/contact-modal.js" defer></script>
+  <script src="/JavaScript/dynamic-text-about-me.js" defer></script>
+  <script src="/JavaScript/marquee.js"></script>
+  <script src="/JavaScript/cert-badges.js" defer></script>
 </head>
 <body>
   <div class="background" aria-hidden="true" id="bg"></div>
@@ -86,7 +86,7 @@
           </div>
       </div>
       <div class="hero-image">
-        <img src="../Images/hero image 2.png" alt="Katie Thompson" />
+        <img src="/Images/hero image 2.png" alt="Katie Thompson" />
       </div>
     </div>
   </section>
@@ -125,7 +125,7 @@
     <h3 class="section-subtitle">Who is KT, anyway?</h3>
     <div class="about-me-flex">
     <p id="about-intro"> Hi there recruiter, colleague or curious internet adventurer! My name is <span class="highlight">Katie.</span></p>
-    <figure><img src="..\Images\1000021071.jpg" alt="KT's Dad wearing a Deadpool Mask" class="about-image">
+    <figure><img src="\Images\1000021071.jpg" alt="KT's Dad wearing a Deadpool Mask" class="about-image">
     <figcaption>My dad, who inspired my interest in computing at a very early age.</figcaption></figure>
     <p> I'm a highly-achieving student who is <span class="highlight">passionate</span> about computing and its potential to create <span class="highlight">positive change</span> for businesses, individuals and wider society. I'm constantly seeking opportunities to learn and grow in this dynamic field - if I do not currently have the skills you're looking for, I'll make sure that's fixed before very long! I take it as a personal challenge. </p>
     <p> In my spare time, I'm <span class="highlight">modifying videogames</span> I like to play (Minecraft, Baldur's Gate, The Sims Series), I'm jotting down my thoughts on the <span class="highlight">ethical use-cases for AI</span>, or I'm cracking open my keyboard to desolder its switches and lube its stabilizers. You might also catch me sinking far too many hours into FPS games (Overwatch 2, VALORANT, CS:GO).</p>
@@ -225,7 +225,13 @@
 <section id="cv" class="container">
   <h2 class="section-title">KT's CV</h2>
   <p class="section-subtitle">You want a copy? No problem!</p>
-  <iframe src="https://drive.google.com/file/d/1B1r2LCYmwuF5v32VrfTAiEXxKAxMPM0g/preview" width="640" height="480" allow="autoplay"></iframe>
+<!-- Responsive PDF container -->
+  <div class="pdf-container">
+    <iframe 
+      src="https://drive.google.com/file/d/1B1r2LCYmwuF5v32VrfTAiEXxKAxMPM0g/preview" 
+      allow="autoplay"
+      title="Katie Thompson's CV">
+    </iframe>
   </div>
 </section> 
 
