@@ -14,6 +14,12 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" crossorigin="anonymous"/>
+
+  <!-- AOS Animation Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="../Images/Favicon/favicon-32x32.png">
 
@@ -22,6 +28,7 @@
   <link rel="stylesheet" href="../CSS/index.css">
   <link rel="stylesheet" href="../CSS/modal-contact.css">
   <link rel="stylesheet" href="../CSS/about-me.css">
+  <link rel="stylesheet" href="../CSS/marquee.css">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +40,7 @@
   <script src="../JavaScript/contact.js"></script>
   <script src="../JavaScript/contact-modal.js" defer></script>
   <script src="../JavaScript/dynamic-text-about-me.js" defer></script>
+    <script src="../JavaScript/marquee.js"></script>
   <script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
 </head>
 <body>
@@ -63,7 +71,7 @@
     <div class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <p>A computing student currently pursuing BSc Interactive Computing at UU Belfast.</p>
+          <p>A computing student currently pursuing <span class="highlight">BSc Interactive Computing at UU Belfast.</span></p>
           <br>
           <p>Award-winning, deeply passionate about learning new skills, and eager to make a positive impact in the tech world. Especially passionate about ethical use and consumption of AI-generated content.</p>
           <br>
@@ -91,23 +99,66 @@
     <!-- About Me Section -->
     <section id="about-me">
       <div class="about-header">
-      <h1>Kainos Women in Computing Award 2025 Winner</h1>
+        <a href="https://okt.to/HCPwpI" target="_blank" class="award-link">
+      <h1>Kainos Women in Computing Award 2025 Winner
+<svg class="link-icon" xmlns="http://www.w3.org/2000/svg" 
+         viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 
+               9.3-9.29H14V3zM5 5h5V3H5c-1.1 0-2 .9-2 
+               2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 
+               2-2v-5h-2v5H5V5z"/>
+    </svg>
+      </a></h1>
+      
       <br>
-      </div>
-
-<hr class="rounded">      
-
+      </div>   
       <!-- CREDIT: https://codepen.io/vpantano/pen/xxbgYe & https://codepen.io/elis-felicio/pen/dPoWMMK-->
       <div class="dynamic-wrapper">
   <div class="dynamic-sentence">
-    <span>I always strive to be </span>
+    <span class="static-text">I always strive to be </span>
     <span class="dynamic-text" id="dynamic-text"></span>
     </div>
   </div>
+  <hr class="rounded">
+  <div class="about-me-text container-b">
+    <div class-"about-me-flex">
+    <p id="about-intro"> Hi there recruiter, colleague or curious internet adventurer! My name is <span class="highlight">Katie.</span></p>
+    <figure><img src="..\Images\1000021071.jpg" alt="KT's Dad wearing a Deadpool Mask" class="about-image">
+    <figcaption>My dad, who inspired my interest in computing at a very early age.</figcaption></figure>
+    <p> I'm a highly-achieving student who is <span class="highlight">passionate</span> about computing and its potential to create <span class="highlight">positive change</span> for businesses, individuals and wider society. I'm constantly seeking opportunities to learn and grow in this dynamic field - if I do not currently have the skills you're looking for, I'll make sure that's fixed before very long! I take it as a personal challenge. </p>
+    <p> In my spare time, I'm <span class="highlight">modifying videogames</span> I like to play (Minecraft, Baldur's Gate, The Sims Series), I'm jotting down my thoughts on the <span class="highlight">ethical use-cases for AI</span>, or I'm cracking open my keyboard to desolder its switches and lube its stabilizers. You might also catch me sinking far too many hours into FPS games (Overwatch 2, VALORANT, CS:GO).</p>
+    <p> I especially love to attempt to <span class="highlight">debug AI-hallucinated code</span>, and I love to boot <span class="highlight">custom firmware</span> onto gaming consoles (NSW, Wii, NDS, DSi, 3DS).</p>
+    <p> I spent the majority of my teenage years <span class="highlight">building and installing PC hardware </span> units, locating and <span class="highlight">reverse-engineering exploits </span> in Nintendo and Microsoft hardware, and creating <span class="highlight">vector-based graphic designs </span> on an independently-contracted basis for various clients, both individuals and businesses.</p>
+    <p> If you're looking for a candidate who has a deep love for professional growth, a deep personal love for what they do, can perform under pressure and adapt to change quickly, think of me - <span class="highlight-bigger">Think KT.</span></p>
+</div>
 </div>
     </section>
 
 <hr class="rounded">
+<!-- CREDIT: https://codepen.io/smashingmag/pen/yLrXrVY -->
+<div class="marquee">
+    <ul class="marquee-content">
+      <li><i class="fab fa-github"></i></li>
+      <li><i class="fab fa-codepen"></i></li>
+      <li><i class="fab fa-free-code-camp"></i></li>
+      <li><i class="fab fa-dev"></i></li>
+      <li><i class="fab fa-linkedin"></i></li>
+      <li><i class="fab fa-windows"></i></li>
+      <li><i class="fab fa-python"></i></li>
+      <li><i class="fab fa-android"></i></li>
+      <li><i class="fab fa-html5"></i></li>
+      <li><i class="fab fa-css3-alt"></i></li>
+      <li><i class="fab fa-js-square"></i></li>
+      <li><i class="fab fa-twitch"></i></li>
+      <li><i class="fab fa-discord"></i></li>
+      <li><i class="fab fa-steam"></i></li>
+      <li><i class="fab fa-apple"></i></li>
+      <li><i class="fab fa-youtube"></i></li>
+      <li><i class="fab fa-figma"></i></li>
+      <li><i class="fab fa-adobe"></i></li>
+      <li><i class="fab fa-xbox"></i></li>
+    </ul>
+  </div>
 
     <!-- Projects Section -->
     <section id="projects" class="container-b">

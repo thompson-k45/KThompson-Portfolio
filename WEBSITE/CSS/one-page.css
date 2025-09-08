@@ -9,7 +9,9 @@ hr.rounded {
   border-top: 8px solid #88698c;
   border-radius: 5px;
   margin: 2rem auto;
-  width: 95%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 30%;
 }
 
 * {
@@ -177,39 +179,10 @@ a.nav-button:active {
   margin-bottom: 2rem;
 }
 
-/* LINKS */
-a {
-  color: #0645AD;
-  text-decoration: underline;
-}
-
-a:active {
-  color: #FF0000;
-}
-
-a:not(.nav-button):hover,
-a:not(.nav-button):focus {
-  color: #0B0080;
-  background-color: #e6f0ff;
-  text-decoration: underline;
-  outline: none;
-}
-
 /* Keyboard focus */
 a:focus-visible {
   outline: 3px solid #ffbf47;
   outline-offset: 2px;
-}
-
-/* Award Styling */
-.about-header h1 {
-  font-family: product-sans, sans-serif;
-  font-weight: bold;
-  font-size: 4.5rem;
-  margin-bottom: 0.5rem;
-  padding-left: 3vw;
-  padding-top: 3vw;
-  color:#f89899
 }
 
 /* CV SECTION Download Button */
