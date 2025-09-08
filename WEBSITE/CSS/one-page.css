@@ -136,24 +136,27 @@ a.nav-button:active,
     justify-content: center;
     flex-direction: column;
   }
-
+  
   .nav-bar ul {
-    flex-direction: column;
+    /* Changed to horizontal layout */
+    flex-direction: row;
     width: 100%;
     display: none;
     margin-top: 10px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 0.5rem; /* Add space between buttons */
   }
-
+  
   .nav-bar ul.active {
-    display: block;
+    display: flex; /* Changed from block to flex for horizontal layout */
   }
-
+  
   .menu-toggle {
     display: block;
     align-self: flex-start;
   }
-}
 
 .container {
   position: relative;

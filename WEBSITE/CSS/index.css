@@ -84,3 +84,81 @@
   align-items: flex-start; /* or center, depending on design */
   text-align: left;
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .hero-section {
+    width: 90vw;
+    margin: 0 auto;        /* center hero-section */
+    height: auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center all children */
+    text-align: center;
+  }
+
+  .hero-content {
+    flex-direction: column;  /* stack text and image vertically */
+    align-items: center;     /* center content */
+    text-align: center;      /* center text */
+    gap: 1.5rem;             /* spacing between sections */
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;       /* smaller font for readability */
+    padding-left: 0;         /* remove horizontal padding */
+  }
+
+  .hero-image {
+    position: relative;    /* remove absolute positioning */
+    top: 0;
+    right: 0;
+    width: 60%;
+    margin: 0 auto;        /* center the image */
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;      /* spacing above image */
+  }
+
+.hero-header {
+    text-align: center;     /* center the h1 */
+    width: 100%;            /* take full width */
+    margin: 0 auto;         /* ensure centered in the section */
+    padding-left: 0;        /* remove leftover padding */
+    padding-top: 1rem;      /* optional spacing from top */
+  }
+
+  .hero-header h1 {
+    font-size: 3rem;        /* scale down header for mobile */
+  }
+}
+
+  .background {
+    background-size: 50px 50px; /* shrink repeated background logos */
+  }
+
+@media (max-width: 576px) {
+  .hero-section {
+    width: 95vw;
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .hero-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image {
+    width: 80%;
+  }
+}

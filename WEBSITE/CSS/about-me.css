@@ -1,5 +1,4 @@
-
-/* Award Styling */
+/* Award Styling - Mobile Fixed */
 .award-header {
   display: flex;
   flex-direction: column;
@@ -25,47 +24,43 @@
   color: #ff758c;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;              /* space between text and icon */
+  gap: 0.5rem;
+  flex-wrap: nowrap;
   transition: color 0.3s ease, transform 0.2s ease;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 6px;
+  justify-content: center;
+  /* Fix for mobile icon positioning */
+  line-height: 1.2;
 }
 
 /* Hover effect */
 .award-link:hover {
-  color: #f1838e;           /* lighter shade for hover */
+  color: #f1838e;
   transform: translateY(-2px);
   text-decoration-thickness: 4px;
 }
 
 /* Focus (keyboard users) */
 .award-link:focus {
-  outline: 3px solid #169ae7;  /* high contrast blue focus ring */
+  outline: 3px solid #169ae7;
   outline-offset: 4px;
 }
 
-/* SVG icon */
+/* SVG icon - Mobile optimized */
 .link-icon {
-  width: 0.5em;
-  height: 0.5em;
-  fill: currentColor;      /* makes it inherit the link colour */
+  width: 0.6em;  /* Slightly larger for better visibility */
+  height: 0.6em;
+  fill: currentColor;
   opacity: 0.85;
   transition: opacity 0.3s ease;
+  flex-shrink: 0;  /* Prevent icon from shrinking */
+  margin-top: -0.1em;  /* Slight adjustment for better alignment */
 }
 
 .award-link:hover .link-icon {
   opacity: 1;
-}
-
-/* Respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .award-link {
-    transition: none;
-  }
-  .link-icon {
-    transition: none;
-  }
 }
 
 /* DYNAMIC TEXT SUB-HEADING */
@@ -111,7 +106,6 @@
     0%, 49% { border-color: #e6d2d4; }
     50%, 100% { border-color: transparent; }
 }
-
 
 /* About Me Body */
 .about-me-text p {
@@ -186,4 +180,70 @@
   border-left: 4px solid #ff758c;
   margin-top: 0.5rem;
   font-weight: lighter;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .award-link {
+    transition: none;
+  }
+  .link-icon {
+    transition: none;
+  }
+}
+
+/* Responsive adjustments - Enhanced */
+@media (max-width: 992px) {
+  .award-header h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+
+  .award-link {
+    font-size: 2.5rem;
+    gap: 0.4rem;
+    line-height: 1.3;
+  }
+
+  .link-icon {
+    width: 0.7em;  /* Slightly larger for tablet */
+    height: 0.7em;
+  }
+}
+
+@media (max-width: 768px) {
+  .award-link {
+    font-size: 2rem;
+    gap: 0.4rem;
+    /* Stack on very small screens if needed */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .link-icon {
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 0;  /* Reset margin on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .award-header h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .award-link {
+    font-size: 1.8rem;
+    gap: 0.4rem;  /* Increased gap for better spacing */
+    line-height: 1.4;
+    /* Allow wrapping on very small screens */
+    flex-wrap: wrap;
+  }
+
+  .link-icon {
+    width: 0.9em;  /* Make icon more prominent on mobile */
+    height: 0.9em;
+    margin-top: 0.1em;  /* Fine-tune alignment */
+  }
 }
